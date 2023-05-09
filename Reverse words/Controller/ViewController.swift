@@ -9,7 +9,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     @IBOutlet weak var inputTextField: UITextField!
     @IBOutlet weak var outputLabel: UILabel!
     @IBOutlet weak var reverseButton: UIButton!
@@ -22,6 +21,7 @@ class ViewController: UIViewController {
         if reverseButton.titleLabel?.text == "Reverse" {
             guard let inputText = inputTextField.text else { return }
             let reversedWrods = inputText.reversed()
+            outputLabel.textColor = .blue
             outputLabel.text = String(reversedWrods)
             reverseButton.setTitle("Clear", for: .normal)
         } else {
@@ -31,4 +31,3 @@ class ViewController: UIViewController {
         }
     }
 }
-//glpat-U7BAWxyskW-CwX9U1TmX
