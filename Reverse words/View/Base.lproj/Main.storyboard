@@ -21,8 +21,11 @@
                                 <rect key="frame" x="59" y="223.66666666666666" width="275" height="33.999999999999972"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3XF-JI-h70"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWa-lb-uU3">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWa-lb-uU3">
                                 <rect key="frame" x="154" y="656" width="85" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Reverse"/>
@@ -83,6 +86,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Blb-q8-eZr">
+                                <rect key="frame" x="164" y="699" width="64" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Clear"/>
+                                <connections>
+                                    <action selector="clearTextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LCf-7u-6Il"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -114,6 +126,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="clearButton" destination="Blb-q8-eZr" id="lRP-A9-pPP"/>
                         <outlet property="inputTextField" destination="6Vh-O9-sC8" id="fcn-Sq-KZK"/>
                         <outlet property="outputLabel" destination="TES-fj-axP" id="Csi-W4-Hzl"/>
                         <outlet property="reverseButton" destination="DWa-lb-uU3" id="adj-ez-YiM"/>
