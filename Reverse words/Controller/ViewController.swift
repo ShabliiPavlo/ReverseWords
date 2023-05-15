@@ -23,17 +23,15 @@ class ViewController: UIViewController {
     }
     
     func setupTextFieldAppearance() {
-        bottomLine.frame = CGRect(x: 0, y: inputTextField.frame.height - 1, width: inputTextField.frame.width, height: 1)
+        bottomLine.frame = CGRect(x: 0, y: inputTextField.frame.height - -5, width: inputTextField.frame.width, height: 1)
         updateBottomLineColor(active: false)
         inputTextField.layer.addSublayer(bottomLine)
-        inputTextField.delegate = self
     }
     
     @IBAction func reversTextButton(_ sender: UIButton) {
         guard let inputText = inputTextField.text else { return }
         let reversedText = reverseModel.reverseText(inputText)
         outputLabel.text = reversedText
-        outputLabel.textColor = .blue
         reverseButton.isHidden = true
         clearButton.isHidden = false
     }

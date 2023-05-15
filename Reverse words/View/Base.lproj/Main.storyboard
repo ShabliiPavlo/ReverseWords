@@ -27,6 +27,9 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWa-lb-uU3">
                                 <rect key="frame" x="25" y="727.66666666666663" width="343" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="4tF-gf-vLM"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Reverse" cornerStyle="large">
@@ -115,7 +118,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6Vh-O9-sC8" secondAttribute="trailing" constant="16" id="12G-xN-iAw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DWa-lb-uU3" secondAttribute="bottom" constant="30.333333333333371" id="1Ub-ne-ZaU"/>
                             <constraint firstItem="BGr-5d-nQO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="C0f-tT-lZe"/>
                             <constraint firstItem="6Vh-O9-sC8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Dtj-fp-tYs"/>
                             <constraint firstItem="AKT-P4-9P4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="JWh-cS-KLr"/>
