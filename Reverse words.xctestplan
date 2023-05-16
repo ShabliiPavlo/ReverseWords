@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "99848917-E102-402D-9E0D-70265FE262FB",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Reverse words.xcodeproj",
+      "identifier" : "400F15852A0438970045B46D",
+      "name" : "Reverse words"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Reverse words.xcodeproj",
+        "identifier" : "4045F02E2A1291D500A5070B",
+        "name" : "Reverse wordsTests"
+      }
+    }
+  ],
+  "version" : 1
+}
