@@ -9,44 +9,44 @@ import XCTest
 @testable import Reverse_words
 
 final class Reverse_wordsTests: XCTestCase {
-
+    
     var reverseModel: ReverseModel!
     
     override func setUpWithError() throws {
         reverseModel = ReverseModel()
     }
-
+    
     override func tearDownWithError() throws {
         reverseModel = nil
         try super.tearDownWithError()
     }
-
-    func testExample() throws {
-                // Test case 1
-                let inputTest = "Test string"
-                let expectedOutputTest = "tseT gnirts"
+    
+    func testCorrectReverse() throws {
+        // Test case 1
+        let inputTest = "Test string"
+        let expectedOutputTest = "tseT gnirts"
         let outputTest = reverseModel.reverseText(inputTest)
-                XCTAssertEqual(outputTest, expectedOutputTest)
-                
-                // Test case 2
-                let inputHello = "Hello!"
-                let expectedOutputHello = "!olleH"
-                let outputHello = reverseModel.reverseText(inputHello)
-                XCTAssertEqual(expectedOutputHello, outputHello)
+        XCTAssertEqual(outputTest, expectedOutputTest)
+        
+        // Test case 2
+        let inputHello = "Hello!"
+        let expectedOutputHello = "!olleH"
+        let outputHello = reverseModel.reverseText(inputHello)
+        XCTAssertEqual(expectedOutputHello, outputHello)
     }
-
+    
     func testPerformanceExample() throws {
         let inputTestSpeed = "Speed"
         measure(
             metrics: [
-              XCTClockMetric(),
-              XCTCPUMetric(),
-              XCTStorageMetric(),
-              XCTMemoryMetric()
+                XCTClockMetric(),
+                XCTCPUMetric(),
+                XCTStorageMetric(),
+                XCTMemoryMetric()
             ]
-          ) {
+        ) {
             reverseModel.reverseText(inputTestSpeed)
         }
     }
-
+    
 }
