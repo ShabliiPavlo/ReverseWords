@@ -10,7 +10,11 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var inputTextField: UITextField!
-    @IBOutlet weak var outputLabel: UILabel!
+    @IBOutlet weak var outputLabel: UILabel!{
+        didSet {
+            outputLabel.accessibilityIdentifier = "OutputLabel"
+        }
+    }
     @IBOutlet weak var reverseButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
     
