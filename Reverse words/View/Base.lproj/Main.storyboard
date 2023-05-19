@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nHu-6T-0wI">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -9,10 +9,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Tab Bar Controller-->
+        <scene sceneID="NFT-Pi-UF8">
+            <objects>
+                <tabBarController id="nHu-6T-0wI" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mRJ-SV-VHZ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="W6F-wM-r5K"/>
+                        <segue destination="i2v-aC-11B" kind="relationship" relationship="viewControllers" id="kQz-ET-jba"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z3O-mG-yn8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-665" y="-151"/>
+        </scene>
+        <!--Reverse-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Reverse_words" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ReverseViewController" customModule="Reverse_words" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -140,6 +158,8 @@
                             <constraint firstItem="BGr-5d-nQO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zca-w5-EKG"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Reverse" id="kLj-Sx-81W"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="clearButton" destination="Blb-q8-eZr" id="lRP-A9-pPP"/>
                         <outlet property="inputTextField" destination="6Vh-O9-sC8" id="fcn-Sq-KZK"/>
@@ -149,7 +169,80 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="-1485" y="592"/>
+        </scene>
+        <!--Anagrams-->
+        <scene sceneID="nFJ-Ce-DTn">
+            <objects>
+                <viewController id="i2v-aC-11B" customClass="AnagremsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NcU-PD-s2I">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cEb-DH-pxS">
+                                <rect key="frame" x="55" y="191" width="282" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                            </segmentedControl>
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to ignor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hme-ML-EoJ">
+                                <rect key="frame" x="55" y="250" width="282" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All characters except alphabetic symbols" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Pf-XE-2ec">
+                                <rect key="frame" x="55" y="250" width="282" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Caf-2N-jSt">
+                                <rect key="frame" x="170" y="309" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeZ-3B-Rsi">
+                                <rect key="frame" x="55" y="355" width="282" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to reverse" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OtT-60-dz3">
+                                <rect key="frame" x="55" y="139" width="282" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KAb-3b-zfS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Caf-2N-jSt" firstAttribute="leading" secondItem="KAb-3b-zfS" secondAttribute="leading" constant="170" id="1T0-Yo-FbX"/>
+                            <constraint firstItem="KAb-3b-zfS" firstAttribute="trailing" secondItem="Hme-ML-EoJ" secondAttribute="trailing" constant="56" id="3rx-cI-ouH"/>
+                            <constraint firstItem="OtT-60-dz3" firstAttribute="top" secondItem="NcU-PD-s2I" secondAttribute="topMargin" constant="80" id="4UO-W0-1Jg"/>
+                            <constraint firstItem="KAb-3b-zfS" firstAttribute="trailing" secondItem="oeZ-3B-Rsi" secondAttribute="trailing" constant="56" id="6Re-Fv-Nif"/>
+                            <constraint firstItem="cEb-DH-pxS" firstAttribute="leading" secondItem="KAb-3b-zfS" secondAttribute="leading" constant="55" id="A9W-GJ-Abt"/>
+                            <constraint firstItem="Hme-ML-EoJ" firstAttribute="leading" secondItem="KAb-3b-zfS" secondAttribute="leading" constant="55" id="CTP-tD-xGu"/>
+                            <constraint firstItem="KAb-3b-zfS" firstAttribute="trailing" secondItem="cEb-DH-pxS" secondAttribute="trailing" constant="56" id="DLg-D2-NWH"/>
+                            <constraint firstItem="KAb-3b-zfS" firstAttribute="trailing" secondItem="Caf-2N-jSt" secondAttribute="trailing" constant="171" id="Eb5-V2-734"/>
+                            <constraint firstItem="oeZ-3B-Rsi" firstAttribute="leading" secondItem="KAb-3b-zfS" secondAttribute="leading" constant="55" id="GsM-cD-GeJ"/>
+                            <constraint firstItem="KAb-3b-zfS" firstAttribute="trailing" secondItem="OtT-60-dz3" secondAttribute="trailing" constant="56" id="O1t-hj-0gk"/>
+                            <constraint firstItem="Caf-2N-jSt" firstAttribute="top" secondItem="Hme-ML-EoJ" secondAttribute="bottom" constant="25" id="Umw-PV-gea"/>
+                            <constraint firstItem="Hme-ML-EoJ" firstAttribute="top" secondItem="cEb-DH-pxS" secondAttribute="bottom" constant="28" id="bst-fD-7Cf"/>
+                            <constraint firstItem="4Pf-XE-2ec" firstAttribute="top" secondItem="cEb-DH-pxS" secondAttribute="bottom" constant="28" id="cil-F8-bSQ"/>
+                            <constraint firstItem="4Pf-XE-2ec" firstAttribute="leading" secondItem="KAb-3b-zfS" secondAttribute="leading" constant="55" id="p0v-Uw-YtB"/>
+                            <constraint firstItem="KAb-3b-zfS" firstAttribute="trailing" secondItem="4Pf-XE-2ec" secondAttribute="trailing" constant="56" id="qCv-j2-CiU"/>
+                            <constraint firstItem="oeZ-3B-Rsi" firstAttribute="top" secondItem="Caf-2N-jSt" secondAttribute="bottom" constant="25" id="qwB-D9-Cdb"/>
+                            <constraint firstItem="OtT-60-dz3" firstAttribute="leading" secondItem="KAb-3b-zfS" secondAttribute="leading" constant="55" id="ucP-rK-RYf"/>
+                            <constraint firstItem="cEb-DH-pxS" firstAttribute="top" secondItem="OtT-60-dz3" secondAttribute="bottom" constant="18" id="yyD-K8-SbX"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Anagrams" id="hdX-Ye-7Fe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GLF-xi-Jws" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81.679389312977094" y="591.54929577464793"/>
         </scene>
     </scenes>
     <resources>

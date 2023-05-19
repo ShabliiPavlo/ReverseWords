@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		400F158A2A0438970045B46D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400F15892A0438970045B46D /* AppDelegate.swift */; };
 		400F158C2A0438970045B46D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400F158B2A0438970045B46D /* SceneDelegate.swift */; };
-		400F158E2A0438970045B46D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400F158D2A0438970045B46D /* ViewController.swift */; };
+		400F158E2A0438970045B46D /* ReverseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 400F158D2A0438970045B46D /* ReverseViewController.swift */; };
 		400F15912A0438970045B46D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400F158F2A0438970045B46D /* Main.storyboard */; };
 		400F15932A0438990045B46D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 400F15922A0438990045B46D /* Assets.xcassets */; };
 		400F15962A0438990045B46D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400F15942A0438990045B46D /* LaunchScreen.storyboard */; };
+		40250AB42A17784E005781DD /* AnagremsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40250AB32A17784E005781DD /* AnagremsViewController.swift */; };
 		4045F0322A1291D500A5070B /* Reverse_wordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045F0312A1291D500A5070B /* Reverse_wordsTests.swift */; };
 		408B8B762A13A5EC008EDB4E /* ReverseWordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408B8B752A13A5EC008EDB4E /* ReverseWordsUITests.swift */; };
 		408B8B782A13A5EC008EDB4E /* ReverseWordsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408B8B772A13A5EC008EDB4E /* ReverseWordsUITestsLaunchTests.swift */; };
@@ -47,11 +48,12 @@
 		400F15862A0438970045B46D /* Reverse words.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reverse words.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		400F15892A0438970045B46D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		400F158B2A0438970045B46D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		400F158D2A0438970045B46D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		400F158D2A0438970045B46D /* ReverseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseViewController.swift; sourceTree = "<group>"; };
 		400F15902A0438970045B46D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		400F15922A0438990045B46D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		400F15952A0438990045B46D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		400F15972A0438990045B46D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40250AB32A17784E005781DD /* AnagremsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagremsViewController.swift; sourceTree = "<group>"; };
 		4045F02F2A1291D500A5070B /* Reverse wordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reverse wordsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4045F0312A1291D500A5070B /* Reverse_wordsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reverse_wordsTests.swift; sourceTree = "<group>"; };
 		408B8B612A135151008EDB4E /* Reverse words.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Reverse words.xctestplan"; sourceTree = "<group>"; };
@@ -167,7 +169,8 @@
 		40CF66FC2A0556C000EC4BEB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				400F158D2A0438970045B46D /* ViewController.swift */,
+				400F158D2A0438970045B46D /* ReverseViewController.swift */,
+				40250AB32A17784E005781DD /* AnagremsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -333,9 +336,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				400F158E2A0438970045B46D /* ViewController.swift in Sources */,
+				400F158E2A0438970045B46D /* ReverseViewController.swift in Sources */,
 				400F158A2A0438970045B46D /* AppDelegate.swift in Sources */,
 				40FE16062A0C4E9E005AF7FC /* ReverseModel.swift in Sources */,
+				40250AB42A17784E005781DD /* AnagremsViewController.swift in Sources */,
 				400F158C2A0438970045B46D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
