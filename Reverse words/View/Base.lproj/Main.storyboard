@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nHu-6T-0wI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="krU-Q4-Lne">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -10,24 +10,24 @@
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
-        <scene sceneID="NFT-Pi-UF8">
+        <scene sceneID="g8B-YR-oKM">
             <objects>
-                <tabBarController id="nHu-6T-0wI" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mRJ-SV-VHZ">
+                <tabBarController id="krU-Q4-Lne" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="l3F-b7-NXi">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="W6F-wM-r5K"/>
-                        <segue destination="i2v-aC-11B" kind="relationship" relationship="viewControllers" id="kQz-ET-jba"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="z4i-XU-t08"/>
+                        <segue destination="i2v-aC-11B" kind="relationship" relationship="viewControllers" id="tGv-aj-CKa"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z3O-mG-yn8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8wx-gB-iA7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-665" y="-151"/>
+            <point key="canvasLocation" x="-689" y="-306"/>
         </scene>
-        <!--Reverse-->
+        <!--Reverse mod-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ReverseViewController" customModule="Reverse_words" customModuleProvider="target" sceneMemberID="viewController">
@@ -158,7 +158,7 @@
                             <constraint firstItem="BGr-5d-nQO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="zca-w5-EKG"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Reverse" id="kLj-Sx-81W"/>
+                    <tabBarItem key="tabBarItem" title="Reverse mod" id="GZm-pF-30e"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="clearButton" destination="Blb-q8-eZr" id="lRP-A9-pPP"/>
@@ -171,10 +171,10 @@
             </objects>
             <point key="canvasLocation" x="-1485" y="592"/>
         </scene>
-        <!--Anagrams-->
+        <!--Anagrams mod-->
         <scene sceneID="nFJ-Ce-DTn">
             <objects>
-                <viewController id="i2v-aC-11B" customClass="AnagremsViewController" sceneMemberID="viewController">
+                <viewController id="i2v-aC-11B" customClass="AnagramsViewController" customModule="Reverse_words" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NcU-PD-s2I">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,8 +182,8 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cEb-DH-pxS">
                                 <rect key="frame" x="55" y="191" width="282" height="32"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Default"/>
+                                    <segment title="Custom"/>
                                 </segments>
                             </segmentedControl>
                             <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to ignor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hme-ML-EoJ">
@@ -204,7 +204,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oeZ-3B-Rsi">
-                                <rect key="frame" x="55" y="355" width="282" height="0.0"/>
+                                <rect key="frame" x="55" y="355" width="282" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hCm-UW-NQY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -213,6 +216,9 @@
                                 <rect key="frame" x="55" y="139" width="282" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="i2v-aC-11B" id="2Uj-cX-zM0"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KAb-3b-zfS"/>
@@ -238,7 +244,14 @@
                             <constraint firstItem="cEb-DH-pxS" firstAttribute="top" secondItem="OtT-60-dz3" secondAttribute="bottom" constant="18" id="yyD-K8-SbX"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Anagrams" id="hdX-Ye-7Fe"/>
+                    <tabBarItem key="tabBarItem" title="Anagrams mod" id="5Hg-KA-4FM"/>
+                    <connections>
+                        <outlet property="anagramsTextToIgnor" destination="Hme-ML-EoJ" id="S1o-Q3-iNQ"/>
+                        <outlet property="anagramsTextToReverse" destination="OtT-60-dz3" id="YH6-bK-FPc"/>
+                        <outlet property="resultDescription" destination="4Pf-XE-2ec" id="Ixo-zR-M9g"/>
+                        <outlet property="resulttextLable" destination="oeZ-3B-Rsi" id="L6b-A5-yh6"/>
+                        <outlet property="switcherTextType" destination="cEb-DH-pxS" id="8V9-JH-GUu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GLF-xi-Jws" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

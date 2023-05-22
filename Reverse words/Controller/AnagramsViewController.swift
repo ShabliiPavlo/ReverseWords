@@ -8,11 +8,38 @@
 import UIKit
 
 class AnagramsViewController: UIViewController {
-
+    
+    @IBOutlet weak var switcherTextType: UISegmentedControl!
+    @IBOutlet weak var anagramsTextToReverse: UITextField!
+    @IBOutlet weak var resulttextLable: UILabel!
+    @IBOutlet weak var resultDescription: UILabel!
+    @IBOutlet weak var anagramsTextToIgnor: UITextField!
+    
+    let anagramsModel = AnagramsModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-
 }
+
+extension AnagramsViewController: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        guard let inputText = anagramsTextToReverse.text else { return true }
+        let reversedText = anagramsModel.reverseTextOnly(inputText)
+        
+        if let text = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) {
+            
+            resulttextLable.text = reversedText
+            
+            guard !text.isEmpty else {
+                resulttextLable.text = "" 
+                return true
+            }
+        }
+        return true
+    }
+}
+
+

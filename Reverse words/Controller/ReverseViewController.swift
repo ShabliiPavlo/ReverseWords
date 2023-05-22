@@ -9,13 +9,21 @@ import UIKit
 
 class ReverseViewController: UIViewController {
     
-    @IBOutlet weak var inputTextField: UITextField!
+    @IBOutlet weak var inputTextField: UITextField!{
+        didSet {
+            inputTextField.accessibilityIdentifier = "Text to reverse"
+        }
+    }
     @IBOutlet weak var outputLabel: UILabel!{
         didSet {
             outputLabel.accessibilityIdentifier = "OutputLabel"
         }
     }
-    @IBOutlet weak var reverseButton: UIButton!
+    @IBOutlet weak var reverseButton: UIButton!{
+        didSet {
+            reverseButton.accessibilityIdentifier = "Reverse"
+        }
+    }
     @IBOutlet weak var clearButton: UIButton!
     
     let reverseModel = ReverseModel()

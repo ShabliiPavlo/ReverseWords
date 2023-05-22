@@ -13,7 +13,8 @@
 		400F15912A0438970045B46D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400F158F2A0438970045B46D /* Main.storyboard */; };
 		400F15932A0438990045B46D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 400F15922A0438990045B46D /* Assets.xcassets */; };
 		400F15962A0438990045B46D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 400F15942A0438990045B46D /* LaunchScreen.storyboard */; };
-		40250AB42A17784E005781DD /* AnagremsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40250AB32A17784E005781DD /* AnagremsViewController.swift */; };
+		40250AB42A17784E005781DD /* AnagramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40250AB32A17784E005781DD /* AnagramsViewController.swift */; };
+		40250AB62A17B70E005781DD /* AnagramsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40250AB52A17B70E005781DD /* AnagramsModel.swift */; };
 		4045F0322A1291D500A5070B /* Reverse_wordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4045F0312A1291D500A5070B /* Reverse_wordsTests.swift */; };
 		408B8B762A13A5EC008EDB4E /* ReverseWordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408B8B752A13A5EC008EDB4E /* ReverseWordsUITests.swift */; };
 		408B8B782A13A5EC008EDB4E /* ReverseWordsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 408B8B772A13A5EC008EDB4E /* ReverseWordsUITestsLaunchTests.swift */; };
@@ -53,7 +54,8 @@
 		400F15922A0438990045B46D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		400F15952A0438990045B46D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		400F15972A0438990045B46D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		40250AB32A17784E005781DD /* AnagremsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagremsViewController.swift; sourceTree = "<group>"; };
+		40250AB32A17784E005781DD /* AnagramsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramsViewController.swift; sourceTree = "<group>"; };
+		40250AB52A17B70E005781DD /* AnagramsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnagramsModel.swift; sourceTree = "<group>"; };
 		4045F02F2A1291D500A5070B /* Reverse wordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reverse wordsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4045F0312A1291D500A5070B /* Reverse_wordsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reverse_wordsTests.swift; sourceTree = "<group>"; };
 		408B8B612A135151008EDB4E /* Reverse words.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Reverse words.xctestplan"; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				40FE16052A0C4E9E005AF7FC /* ReverseModel.swift */,
+				40250AB52A17B70E005781DD /* AnagramsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,7 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				400F158D2A0438970045B46D /* ReverseViewController.swift */,
-				40250AB32A17784E005781DD /* AnagremsViewController.swift */,
+				40250AB32A17784E005781DD /* AnagramsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -339,7 +342,8 @@
 				400F158E2A0438970045B46D /* ReverseViewController.swift in Sources */,
 				400F158A2A0438970045B46D /* AppDelegate.swift in Sources */,
 				40FE16062A0C4E9E005AF7FC /* ReverseModel.swift in Sources */,
-				40250AB42A17784E005781DD /* AnagremsViewController.swift in Sources */,
+				40250AB62A17B70E005781DD /* AnagramsModel.swift in Sources */,
+				40250AB42A17784E005781DD /* AnagramsViewController.swift in Sources */,
 				400F158C2A0438970045B46D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
