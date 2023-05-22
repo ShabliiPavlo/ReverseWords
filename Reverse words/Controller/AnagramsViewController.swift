@@ -21,6 +21,16 @@ class AnagramsViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func switcherReversType(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            anagramsTextToIgnor.isHidden = true
+            resultDescription.isHidden = false
+        } else {
+            anagramsTextToIgnor.isHidden = false
+            resultDescription.isHidden = true
+        }
+    }
+    
 }
 
 extension AnagramsViewController: UITextFieldDelegate {

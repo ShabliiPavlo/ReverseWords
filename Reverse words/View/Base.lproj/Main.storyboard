@@ -185,6 +185,9 @@
                                     <segment title="Default"/>
                                     <segment title="Custom"/>
                                 </segments>
+                                <connections>
+                                    <action selector="switcherReversType:" destination="i2v-aC-11B" eventType="valueChanged" id="hDg-mk-ju8"/>
+                                </connections>
                             </segmentedControl>
                             <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to ignor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hme-ML-EoJ">
                                 <rect key="frame" x="55" y="250" width="282" height="34"/>
