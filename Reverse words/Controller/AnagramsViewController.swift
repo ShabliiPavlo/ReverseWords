@@ -35,21 +35,19 @@ class AnagramsViewController: UIViewController {
 
 extension AnagramsViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        guard let inputText = anagramsTextToReverse.text else { return true }
-        let reversedText = anagramsModel.reverseTextOnly(inputText)
-        
-        if let text = (textField.text as NSString?)?.replacingCharacters(in: range, with: string) {
-            
-            resulttextLable.text = reversedText
-            
-            guard !text.isEmpty else {
-                resulttextLable.text = "" 
+
+            guard let currentText = textField.text,
+                  let updatedText = (currentText as NSString?)?.replacingCharacters(in: range, with: string) else {
                 return true
             }
+
+            let reversedText = anagramsModel.reverseTextOnly(updatedText)
+            resulttextLable.text = reversedText
+
+            textField.text = updatedText
+
+            return false
         }
-        return true
-    }
 }
 
 
