@@ -186,13 +186,16 @@
                                     <segment title="Custom"/>
                                 </segments>
                                 <connections>
-                                    <action selector="switcherReversType:" destination="i2v-aC-11B" eventType="valueChanged" id="hDg-mk-ju8"/>
+                                    <action selector="switchReverseType:" destination="i2v-aC-11B" eventType="valueChanged" id="hDg-mk-ju8"/>
                                 </connections>
                             </segmentedControl>
                             <textField hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to ignor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hme-ML-EoJ">
                                 <rect key="frame" x="55" y="250" width="282" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="i2v-aC-11B" id="xc3-Ri-XA5"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All characters except alphabetic symbols" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Pf-XE-2ec">
                                 <rect key="frame" x="55" y="250" width="282" height="17"/>
@@ -252,7 +255,8 @@
                         <outlet property="anagramsTextToIgnor" destination="Hme-ML-EoJ" id="S1o-Q3-iNQ"/>
                         <outlet property="anagramsTextToReverse" destination="OtT-60-dz3" id="YH6-bK-FPc"/>
                         <outlet property="resultDescription" destination="4Pf-XE-2ec" id="Ixo-zR-M9g"/>
-                        <outlet property="resulttextLable" destination="oeZ-3B-Rsi" id="L6b-A5-yh6"/>
+                        <outlet property="resultTextLable" destination="oeZ-3B-Rsi" id="L6b-A5-yh6"/>
+                        <outlet property="switcherMods" destination="cEb-DH-pxS" id="Ipz-Z2-HsR"/>
                         <outlet property="switcherTextType" destination="cEb-DH-pxS" id="8V9-JH-GUu"/>
                     </connections>
                 </viewController>
