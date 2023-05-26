@@ -194,6 +194,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="editingChangeTextIgnor:" destination="i2v-aC-11B" eventType="editingChanged" id="cNu-5K-0XL"/>
                                     <outlet property="delegate" destination="i2v-aC-11B" id="xc3-Ri-XA5"/>
                                 </connections>
                             </textField>
@@ -223,6 +224,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="editingChangeTextReverse:" destination="i2v-aC-11B" eventType="editingChanged" id="Dlr-Ql-Pwk"/>
                                     <outlet property="delegate" destination="i2v-aC-11B" id="2Uj-cX-zM0"/>
                                 </connections>
                             </textField>

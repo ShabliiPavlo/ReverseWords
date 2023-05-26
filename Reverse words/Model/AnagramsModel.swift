@@ -38,6 +38,25 @@ class AnagramsModel {
         let reversedText = reversedWords.joined(separator: " ")
         return reversedText
     }
+    
 }
 
-
+extension String {
+    func reversedTextIgnor(ignoringCharactersIn characterSet: CharacterSet) -> String {
+        let separatedWords = components(separatedBy: " ")
+        let reversedWords = separatedWords.map { $0.reversed(omittingCharactersIn: characterSet) }
+        let reversedText = reversedWords.joined(separator: " ")
+        return reversedText
+    }
+    
+    func reversed(omittingCharactersIn characterSet: CharacterSet) -> String {
+        var reversed = reversed()
+            .filter { String($0).rangeOfCharacter(from: characterSet) == nil }
+        let excluded = enumerated()
+            .filter { String($0.element).rangeOfCharacter(from: characterSet) != nil }
+        for (i, char) in excluded {
+            reversed.insert(char, at: reversed.index(reversed.startIndex, offsetBy: i))
+        }
+        return String(reversed)
+    }
+}

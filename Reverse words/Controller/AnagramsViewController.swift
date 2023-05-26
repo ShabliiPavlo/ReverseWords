@@ -34,41 +34,36 @@ class AnagramsViewController: UIViewController {
             updateResultLabel()
         }
     }
+    
+    @IBAction func editingChangeTextReverse(_ sender: Any) {
+        updateResultLabel()
+    }
+    
+    @IBAction func editingChangeTextIgnor(_ sender: Any) {
+        updateResultLabel()
+    }
 }
 
 extension AnagramsViewController: UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        guard let currentTextReverse = anagramsTextToReverse.text,
-              let updatedTextReverse = (currentTextReverse as NSString?)?.replacingCharacters(in: range, with: string) else {
-            return true
-        }
-        
-        let reversedText: String
-        if switcherMods.selectedSegmentIndex == 0 {
-            reversedText = anagramsModel.reverseTextOnly(updatedTextReverse)
-        } else {
-            reversedText = anagramsModel.reverseText(updatedTextReverse)
-        }
-        
-        resultTextLable.text = reversedText
-        anagramsTextToReverse.text = updatedTextReverse
-        
-        return false
-    }
-    
     func updateResultLabel() {
         guard let currentTextReverse = anagramsTextToReverse.text else {
             return
         }
-        
+        guard let currentTextIgnor = anagramsTextToIgnor.text else {
+            return
+        }
+        let characterSetOfIgnor = CharacterSet(charactersIn: currentTextIgnor)
         let reversedText: String
         if switcherMods.selectedSegmentIndex == 0 {
             reversedText = anagramsModel.reverseTextOnly(currentTextReverse)
         } else {
-            reversedText = anagramsModel.reverseText(currentTextReverse)
+            if anagramsTextToIgnor.text == "" {
+                reversedText = anagramsModel.reverseText(currentTextReverse)
+            } else {
+                reversedText = currentTextReverse.reversedTextIgnor(ignoringCharactersIn: characterSetOfIgnor)
+            }
+            
         }
-        
         resultTextLable.text = reversedText
     }
 }
