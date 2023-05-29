@@ -11,22 +11,32 @@ class AnagramsModel {
     func reverseTextOnly(_ text: String) -> String {
         var reversedText = ""
         var currentWord = ""
+        var currentTextIgnor = ""
         
+        for nonLetter in text {
+            if !nonLetter.isLetter && !nonLetter.isWhitespace {
+                currentTextIgnor.append(nonLetter)
+            }
+        }
         for character in text {
-            if character.isLetter {
+            if !character.isWhitespace {
                 currentWord.append(character)
             } else {
                 if !currentWord.isEmpty {
-                    let reversedWord = String(currentWord.reversed())
+                    let characterSetOfIgnor = CharacterSet(charactersIn: currentTextIgnor)
+                    let reversedWord = String(currentWord.reversedTextIgnor(ignoringCharactersIn: characterSetOfIgnor))
                     reversedText.append(reversedWord)
+                    
                     currentWord = ""
+                    
                 }
                 reversedText.append(character)
             }
         }
         
         if !currentWord.isEmpty {
-            let reversedWord = String(currentWord.reversed())
+            let characterSetOfIgnor = CharacterSet(charactersIn: currentTextIgnor)
+            let reversedWord = String(currentWord.reversedTextIgnor(ignoringCharactersIn: characterSetOfIgnor))
             reversedText.append(reversedWord)
         }
         return reversedText

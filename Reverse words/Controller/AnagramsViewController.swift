@@ -44,7 +44,7 @@ class AnagramsViewController: UIViewController {
     }
 }
 
-extension AnagramsViewController: UITextFieldDelegate {
+extension AnagramsViewController {
     func updateResultLabel() {
         guard let currentTextReverse = anagramsTextToReverse.text else {
             return

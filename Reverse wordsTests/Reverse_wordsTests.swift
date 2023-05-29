@@ -11,13 +11,16 @@ import XCTest
 final class Reverse_wordsTests: XCTestCase {
     
     var reverseModel: ReverseModel!
+    var anagramsModel: AnagramsModel!
     
     override func setUpWithError() throws {
         reverseModel = ReverseModel()
+        anagramsModel = AnagramsModel()
     }
     
     override func tearDownWithError() throws {
         reverseModel = nil
+        anagramsModel = nil
         try super.tearDownWithError()
     }
     
@@ -33,6 +36,26 @@ final class Reverse_wordsTests: XCTestCase {
         let expectedOutputHello = "!olleH"
         let outputHello = reverseModel.reverseText(inputHello)
         XCTAssertEqual(expectedOutputHello, outputHello)
+    }
+    
+    func testCorrectDefaultExclusion() {
+        // Test case 1
+        let inputTestFox = "Foxminded cool 24/7"
+        let expectedOutputTestFox = "dednimxoF looc 24/7"
+        let outputFox = anagramsModel.reverseTextOnly(inputTestFox)
+        XCTAssertEqual(expectedOutputTestFox,outputFox)
+        
+        // Test case 2
+        let inputTestRandomCharacter = "abcd efgh"
+        let expectedOutputTestRandom = "dcba hgfe"
+        let outputRandom = anagramsModel.reverseTextOnly(inputTestRandomCharacter)
+        XCTAssertEqual(expectedOutputTestRandom, outputRandom)
+        
+        // Test case 3
+        let inputTestPunctuationMark = "a1bcd efg!h"
+        let expectedOutputTestMark = "d1cba hgf!e"
+        let outputMark = anagramsModel.reverseTextOnly(inputTestPunctuationMark)
+        XCTAssertEqual(expectedOutputTestMark, outputMark)
     }
     
     func testPerformanceExample() throws {
