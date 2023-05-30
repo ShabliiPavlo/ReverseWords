@@ -9,13 +9,33 @@ import UIKit
 
 class AnagramsViewController: UIViewController {
     
-    @IBOutlet weak var switcherTextType: UISegmentedControl!
-    @IBOutlet weak var anagramsTextToReverse: UITextField!
-    @IBOutlet weak var resultTextLable: UILabel!
+    @IBOutlet weak var switcherTextType: UISegmentedControl!{
+        didSet {
+            switcherTextType.accessibilityIdentifier = "switcherTextType"
+        }
+    }
+    @IBOutlet weak var anagramsTextToReverse: UITextField!{
+        didSet {
+            anagramsTextToReverse.accessibilityIdentifier = "anagramsTextToReverse"
+        }
+    }
+    @IBOutlet weak var resultTextLable: UILabel!{
+        didSet {
+            resultTextLable.accessibilityIdentifier = "resultTextLable"
+        }
+    }
     @IBOutlet weak var resultDescription: UILabel!
-    @IBOutlet weak var anagramsTextToIgnor: UITextField!
+    @IBOutlet weak var anagramsTextToIgnor: UITextField!{
+        didSet {
+            anagramsTextToIgnor.accessibilityIdentifier = "anagramsTextToIgnor"
+        }
+    }
     
-    @IBOutlet weak var switcherMods: UISegmentedControl!
+    @IBOutlet weak var switcherMods: UISegmentedControl!{
+        didSet {
+            switcherMods.accessibilityIdentifier = "switcherMods"
+        }
+    }
     
     let anagramsModel = AnagramsModel()
     

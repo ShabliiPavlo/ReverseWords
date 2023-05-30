@@ -58,6 +58,29 @@ final class Reverse_wordsTests: XCTestCase {
         XCTAssertEqual(expectedOutputTestMark, outputMark)
     }
     
+    func testCorrectCustomExclusion() {
+        let exclusion = "xl"
+        let exclusionCharacterSet = CharacterSet(charactersIn: exclusion)
+        
+        //Test case 1
+        let inputTestFox = "Foxminded cool 24/7"
+        let expectedOutputTestFox = "dexdnimoF oocl 7/42"
+        let outputFox = inputTestFox.reversedTextIgnor(ignoringCharactersIn: exclusionCharacterSet)
+        XCTAssertEqual(expectedOutputTestFox,outputFox)
+        
+        //Test case 2
+        let inputTestRandomCharacter = "abcd efgh"
+        let expectedOutputTestRandom = "dcba hgfe"
+        let outputRandom = inputTestRandomCharacter.reversedTextIgnor(ignoringCharactersIn: exclusionCharacterSet)
+        XCTAssertEqual(expectedOutputTestRandom, outputRandom)
+        
+        //Test case 3
+        let inputTestPunctuationMark = "a1bcd efglh"
+        let expectedOutputTestMark = "dcb1a hgfle"
+        let outputMark = inputTestPunctuationMark.reversedTextIgnor(ignoringCharactersIn: exclusionCharacterSet)
+        XCTAssertEqual(expectedOutputTestMark, outputMark)
+    }
+    
     func testPerformanceExample() throws {
         let inputTestSpeed = "Speed"
         measure(
